@@ -14,6 +14,12 @@ const Header = () => {
         className="cursor-pointer" 
          />
       </Link>
+
+      <div className="flex space-x-2">
+        {/* GenreDropdown */}
+        {/* SearchInput */}
+        {/* ThemeToggler */}
+      </div>
     </header>
   )
 }
