@@ -1,4 +1,3 @@
-// new from shadcn themes
 "use client"
 
 import * as React from "react"

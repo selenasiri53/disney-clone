@@ -1,0 +1,3 @@
+// Install for ThemeToggler to work (ThemeToggler.tsx, layout.tsx)
+
+npm i @radix-ui/react-icons
