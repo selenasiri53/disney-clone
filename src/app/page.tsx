@@ -8,7 +8,9 @@ export default async function Home() {
 // lib > getMovies.ts
 
   return (
-    <main className="bg-red-500">
+    <main>
+      {/* className="bg-red-500" */}
+
       {/* CarouselBannerWrapper */}
 
       <div className="flex flex-col space-y-2 xl:-mt-48">
