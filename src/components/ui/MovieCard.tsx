@@ -26,5 +26,3 @@ function MovieCard({movie}: {movie: Movie}) {
 }
 
 export default MovieCard
-
-// `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`
