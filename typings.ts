@@ -27,6 +27,12 @@ export type Genre = {
     name: string;
 };
 
+// 2nd
 export type Genres = {
     genres: Genre[];
 };
+
+// export type Genre2 ={ 
+//     id: number;
+//      name: string; 
+// };

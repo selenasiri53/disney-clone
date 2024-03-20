@@ -26,7 +26,7 @@ async function GenreDropdown() {
     };
 
   const response = await fetch(url, options);
-  const data = (await response.json()) as Genres; // cast the data to the Genres type; must have 
+  const data = (await response.json()) as Genres; // pass the data to the Genres type
 
   console.log(data)
 
@@ -41,7 +41,8 @@ async function GenreDropdown() {
       <DropdownMenuContent>
         <DropdownMenuLabel>Select a Genre</DropdownMenuLabel>
         <DropdownMenuSeparator />
-
+        
+        {/* 3rd */}
         {data.genres.map((genre) => (
           <DropdownMenuItem key={genre.id}>
             <Link href={`/genre/${genre.id}?genre=${genre.name}`}>{genre.name}</Link>

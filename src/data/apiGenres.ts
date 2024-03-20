@@ -1,6 +1,7 @@
 // https://api.themoviedb.org/3/genre/movie/list?language=en
+// 1st
 
-const apiGenresResponse = {
+const apiGenresData = {
     genres: [
       { id: 28, name: 'Action' },
       { id: 12, name: 'Adventure' },
