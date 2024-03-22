@@ -17,8 +17,9 @@ function CarouselsBanner({ movies }: {movies: Movie[] }) {
     ref={emblaRef}
     >
         <div className="flex">
-            {movies.map(movie => (
-                <div key={movie.id} className="flex-[0_0_100%]"> 
+            {movies.map((movie) => (
+                <div key={movie.id} className="flex-[0_0_100%] min-w-0 relative"> 
+                {/* relative - shows text based on that specific movie */}
                 {/* option 1: className added in tailwind.config.ts > 'extend'. use className="flex-full" */}
                 {/* option 2: inline solution: "flex-[0_0_100]" */}
                     hello
@@ -27,12 +28,14 @@ function CarouselsBanner({ movies }: {movies: Movie[] }) {
                         src={getImagePath(movie.backdrop_path, true)}
                         alt=""
                         width={1920}
-                        height={1340} // changed from 1080, to view title and overview below
+                        height={1080}
+                        // height={1340} // changed from 1080, to view title and overview below
                     />
 
-                    <div>
-                        <h2>{movie.title}</h2>
-                        <p>{movie.overview}</p>
+                    <div className="hidden md:inline absolute mt-0 top-0 pt-40 xl:pt-52 left-0 lg:mt-40 bg-transparent z-20 h-full w-full bg-gradient-to-r from-gray-900/90  via-transparent to-transparent p-10 space-y-5 text-white"> 
+                    {/* hidden on mobile view, mt - margin top z - zed-index, see coming through */}
+                        <h2 className="text-5xl font-bold max-w-xl z-50">{movie.title}</h2>
+                        <p className="max-w-xl line-clamp-3">{movie.overview}</p>
                     </div>
                 </div> 
             ))}
