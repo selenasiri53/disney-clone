@@ -29,7 +29,6 @@ function CarouselsBanner({ movies }: {movies: Movie[] }) {
                         alt=""
                         width={1920}
                         height={1080}
-                        // height={1340} // changed from 1080, to view title and overview below
                     />
 
                     <div className="hidden md:inline absolute mt-0 top-0 pt-40 xl:pt-52 left-0 lg:mt-40 bg-transparent z-20 h-full w-full bg-gradient-to-r from-gray-900/90  via-transparent to-transparent p-10 space-y-5 text-white"> 
@@ -40,21 +39,11 @@ function CarouselsBanner({ movies }: {movies: Movie[] }) {
                 </div> 
             ))}
         </div>
+
+        <div 
+            className="absolute inset-0 bg-gradient-to-b from-gray-200/0 via-gray-900/25 to-gray-300 dark:to-[#1A1C29]"
+        />
     </div>)
 }
 
 export default CarouselsBanner
-
-// optimized from:
-
-// type Props = {
-//     movies: Movie[]
-// }
-
-// function CarouselsBanner({movies}: Props) {
-//     const [emblaRef] = useEmblaCarousel({ loop: true, duration: 100 }, [Autoplay()]) // how quickly it will swipe / save
-
-//   return (
-//     <div>CarouselsBanner</div>
-//   )
-// }
