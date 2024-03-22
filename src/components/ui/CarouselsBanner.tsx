@@ -27,8 +27,13 @@ function CarouselsBanner({ movies }: {movies: Movie[] }) {
                         src={getImagePath(movie.backdrop_path, true)}
                         alt=""
                         width={1920}
-                        height={1080}
+                        height={1340} // changed from 1080, to view title and overview below
                     />
+
+                    <div>
+                        <h2>{movie.title}</h2>
+                        <p>{movie.overview}</p>
+                    </div>
                 </div> 
             ))}
         </div>
