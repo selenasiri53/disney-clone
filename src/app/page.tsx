@@ -1,5 +1,6 @@
 import MoviesCarousel from "@/components/ui/MoviesCarousel";
 import { getUpcomingMovies, getTopRatedMovies, getPopularMovies } from "@/lib/getMovies";
+import CarouselBannerWrapper from "@/components/ui/CarouselBannerWrapper";
 
 export default async function Home() {
   const upcomingMovies = await getUpcomingMovies();
@@ -11,7 +12,7 @@ export default async function Home() {
     <main>
       {/* className="bg-red-500" */}
 
-      {/* CarouselBannerWrapper */}
+      <CarouselBannerWrapper />
 
       <div className="flex flex-col space-y-2 xl:-mt-48">
         <MoviesCarousel movies={upcomingMovies} title="Upcoming" />
